@@ -1,0 +1,21 @@
+{
+    "name": "auth0/login",
+    "description": "Laravel plugin that helps authenticate with the auth0 service",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "5.*",
+        "auth0/auth0-php": "^4.0.0",
+        "illuminate/contracts": "5.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers",
+            "src/facade"
+        ],
+        "psr-0": {
+            "Auth0\\Login\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

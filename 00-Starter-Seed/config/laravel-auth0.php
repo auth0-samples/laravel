@@ -42,6 +42,36 @@ return array(
 
     'redirect_uri'  => getenv('AUTH0_CALLBACK_URL')
 
+    /*
+    |--------------------------------------------------------------------------
+    |   Persistence Configuration
+    |--------------------------------------------------------------------------
+    |   persist_user            (Boolean) Optional. Indicates if you want to persist the user info, default true
+    |   persist_access_token    (Boolean) Optional. Indicates if you want to persist the access token, default false
+    |   persist_id_token        (Boolean) Optional. Indicates if you want to persist the id token, default false
+    |
+    */
 
+    // 'persist_user' => true,
+    // 'persist_access_token' => false,
+    // 'persist_id_token' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    |   The authorized token issuers
+    |--------------------------------------------------------------------------
+    |   This is used to verify the decoded tokens when using RS256
+    |
+    */
+    // 'authorized_issuers'  => [ 'https://XXXX.auth0.com/' ],
+    
+    /*
+    |--------------------------------------------------------------------------
+    |   The authorized token issuers
+    |--------------------------------------------------------------------------
+    |   This is used to verify the decoded tokens when using RS256
+    |
+    */
+    // 'api_identifier'  => [ ],
 
 );

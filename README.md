@@ -4,9 +4,11 @@ This is a tutorial on how to run an example laravel application that uses auth0 
 
 ## Clone the example
 
-```
+```bash
 git clone https://github.com/auth0/laravel-auth0-sample.git
 ```
+
+## 
 
 ## Local apache
 
@@ -38,9 +40,9 @@ php artisan migrate
 
 ### Configure Auth0
 
-1. Edit the file `.env` with your auth0 domain, app id and secret.
+1. Rename the `.env.example` file to `.env` and populate it with your Auth0 credentials, including your client ID, client secret, and domain
 
-2. Go to your auth0 dashboard and add `http://<ip-to-apache>/auth0/callback` to your authorized callbacks
+2. Go to your Auth0 dashboard and add `http://<ip-to-apache>/auth0/callback` to your authorized callbacks
 
 3. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
 

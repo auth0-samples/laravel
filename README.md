@@ -38,6 +38,10 @@ After the database is configured, apply the migrations
 php artisan migrate
 ```
 
+### Generate an APP_KEY
+
+Use `php artisan key:generate` to generate your `APP_KEY`.
+
 ### Configure Auth0
 
 1. Rename the `.env.example` file to `.env` and populate it with your Auth0 credentials, including your client ID, client secret, and domain

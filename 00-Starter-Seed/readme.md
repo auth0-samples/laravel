@@ -1,27 +1,109 @@
-# Laravel PHP Framework
+# Laravel example tutorial
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This is a tutorial on how to run an example laravel application that uses auth0 for authentication, we have it in two flavor, as a local application using apache, or in the cloud using heroku
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Clone the example
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+```bash
+git clone https://github.com/auth0/laravel-auth0-sample.git
+```
 
-## Official Documentation
+## 
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Local apache
 
-## Contributing
+### Update dependencies
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Download composer and execute
 
-## Security Vulnerabilities
+```
+php composer.phar install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### Configure the database
+
+If you want to use `mysql` for the example, change settings in `.env` file. The default settings are:
+
+```
+DB_HOST=localhost
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
+
+if you want to use another driver, modify `config/database.php` directly.
+
+After the database is configured, apply the migrations
+```
+php artisan migrate
+```
+
+### Generate an APP_KEY
+
+Use `php artisan key:generate` to generate your `APP_KEY`.
+
+### Configure Auth0
+
+1. Rename the `.env.example` file to `.env` and populate it with your Auth0 credentials, including your client ID, client secret, and domain
+
+2. Go to your Auth0 dashboard and add `http://<ip-to-apache>/auth0/callback` to your authorized callbacks
+
+3. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
+
+
+
+## Heroku
+### Configure your heroku account
+In order to do this you need to have an heroku account and the [Heroku toolbelt](https://toolbelt.heroku.com/) installed.
+
+Login to heroku
+
+     heroku login
+
+Next, we need to create an application from the local git repository. In your path to the repo execute
+
+    heroku create --buildpack https://github.com/heroku/heroku-buildpack-php#beta
+
+Now you have a remote called heroku and you can upload to it by executing
+
+    git push heroku master
+
+### Configure the database
+
+Heroku uses postgresql by default, we can enable it by executing
+
+    heroku addons:add heroku-postgresql:dev
+
+Then apply the migrations by running the following command
+
+    heroku run php /app/artisan migrate
+
+### Configure Auth0
+
+Add auth0 as an addon
+
+    heroku addons:add auth0 --type=php --subdomain=<your-domain>
+
+Open your auth0 dashboard (you can use `heroku addons:open auth0`) and configure the callback of your application to be
+
+    http://<domain>/auth0/callback
+
+Configure heroku to use the same callback
+
+    heroku config:set AUTH0_CALLBACK_URL="http://<domain>/auth0/callback"
+
+## Things to note:
+* The Procfile tells heroku how to invoke an apache instance that is compatible with laravel
+* The `bootstrap/start.php` has a function that detects whether the enviroment is local or heroku
+
+## Issue Reporting
+
+If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
+
+## Author
+
+[Auth0](auth0.com)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.

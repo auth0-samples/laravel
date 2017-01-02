@@ -2,15 +2,7 @@
 
 This is a tutorial on how to run an example laravel application that uses auth0 for authentication, we have it in two flavor, as a local application using apache, or in the cloud using heroku
 
-## Clone the example
-
-```bash
-git clone https://github.com/auth0/laravel-auth0-sample.git
-```
-
-## 
-
-## Local apache
+## Run the sample
 
 ### Update dependencies
 
@@ -50,9 +42,10 @@ Use `php artisan key:generate` to generate your `APP_KEY`.
 
 3. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
 
-
+##
 
 ## Heroku
+
 ### Configure your heroku account
 In order to do this you need to have an heroku account and the [Heroku toolbelt](https://toolbelt.heroku.com/) installed.
 

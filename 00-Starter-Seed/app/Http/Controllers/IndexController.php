@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
-class IndexController extends Controller 
+class IndexController extends Controller
 {
 
   public function __construct()
@@ -17,22 +17,18 @@ class IndexController extends Controller
       ->with('isLoggedIn', $isLoggedIn);
   }
 
-  public function login() 
+  public function login()
   {
-    $isLoggedIn = \Auth::check();
-    $auth0Config = config('laravel-auth0');
-    return view('login')
-      ->with('isLoggedIn', $isLoggedIn)
-      ->with('auth0Config',$auth0Config);
+    return \App::make('auth0')->login();
   }
 
-  public function logout() 
+  public function logout()
   {
     \Auth::logout();
     return  \Redirect::intended('/');
   }
 
-  public function dump() 
+  public function dump()
   {
     $isLoggedIn = \Auth::check();
     return view('dump')

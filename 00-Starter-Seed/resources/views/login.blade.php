@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <script src="https://cdn.auth0.com/js/lock/10.2/lock.min.js"></script>
+    <script src="https://cdn.auth0.com/js/lock/10.11/lock.min.js"></script>
     <script type="text/javascript">
         var lock = new Auth0Lock('{{ $auth0Config['client_id'] }}', '{{ $auth0Config['domain'] }}');
 

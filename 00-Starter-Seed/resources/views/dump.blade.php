@@ -1,5 +1,5 @@
 @extends('layouts.master', ['isLoggedIn' => $isLoggedIn])
 
 @section('content')
-    {{var_dump($user)}}
+    <pre>{{var_dump($user)}}</pre>
 @stop

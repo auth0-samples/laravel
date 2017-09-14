@@ -96,6 +96,13 @@ Configure heroku to use the same callback
 * The Procfile tells heroku how to invoke an apache instance that is compatible with laravel
 * The `bootstrap/start.php` has a function that detects whether the enviroment is local or heroku
 
+# Running the example with Docker
+
+If you want to run with [Docker](https://www.docker.com/) you need to add the `AUTH0_DOMAIN` and `API_ID`
+to the `.env` filed as explained [previously](#configure-auth0).
+
+Execute in command line `sh exec.sh` to run the Docker in Linux, or `.\exec.ps1` to run the Docker in Windows.
+
 ## Issue Reporting
 
 If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.

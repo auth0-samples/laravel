@@ -3,7 +3,6 @@ FROM php:7.2-rc-alpine
 WORKDIR /home/app
 
 ADD composer.json /home/app
-ADD composer.lock /home/app
 RUN mkdir /home/app/database
 ADD tests/TestCase.php /home/app/tests/
 

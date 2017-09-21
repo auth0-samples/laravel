@@ -19,7 +19,7 @@ class IndexController extends Controller
 
   public function login()
   {
-    return \App::make('auth0')->login();
+    return \App::make('auth0')->login(null, null, ['scope' => 'openid profile email'], 'code');
   }
 
   public function logout()
@@ -33,6 +33,7 @@ class IndexController extends Controller
     $isLoggedIn = \Auth::check();
     return view('dump')
       ->with('isLoggedIn', $isLoggedIn)
-      ->with('user',\Auth::user()->getUserInfo());
+      ->with('user',\Auth::user()->getUserInfo())
+      ->with('accessToken',\App::make('auth0')->getAccessToken());
   }
 }

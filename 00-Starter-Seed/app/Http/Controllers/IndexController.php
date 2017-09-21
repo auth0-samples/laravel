@@ -34,6 +34,6 @@ class IndexController extends Controller
     return view('dump')
       ->with('isLoggedIn', $isLoggedIn)
       ->with('user',\Auth::user()->getUserInfo())
-      ->with('accessToken',\App::make('auth0')->getAccessToken());
+      ->with('accessToken',\Auth::user()->getAuthPassword());
   }
 }

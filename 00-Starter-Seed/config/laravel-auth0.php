@@ -40,7 +40,7 @@ return array(
     |
     */
 
-    'redirect_uri'  => getenv('AUTH0_CALLBACK_URL')
+    'redirect_uri'  => getenv('AUTH0_CALLBACK_URL'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,9 +52,9 @@ return array(
     |
     */
 
-    // 'persist_user' => true,
-    // 'persist_access_token' => false,
-    // 'persist_id_token' => false,
+    'persist_user' => true,
+    'persist_access_token' => true,
+    'persist_id_token' => true
 
     /*
     |--------------------------------------------------------------------------

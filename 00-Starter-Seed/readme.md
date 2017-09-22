@@ -1,26 +1,18 @@
 # Laravel example tutorial
 
-This is a tutorial on how to run an example laravel application that uses auth0 for authentication, we have it in two flavor, as a local application using apache, or in the cloud using heroku
+This is a tutorial on how to run an example [laravel](https://laravel.com/) application that uses [Auth0](auth0.com) for authentication, we have it in two flavor, as a local application using [Apache](https://www.apache.org/) or in the cloud using [heroku](https://www.heroku.com/).
 
-## Clone the example
+## Local Application
 
-```bash
-git clone https://github.com/auth0/laravel-auth0-sample.git
-```
-
-## 
-
-## Local apache
-
-### Update dependencies
-
-Download composer and execute
+### Installing Dependencies
 
 ```
 php composer.phar install
 ```
 
-### Configure the database
+> For more information about Composer usage, check [their official documentation](https://getcomposer.org/doc/01-basic-usage.md).
+
+### (Optional) Configure the database
 
 If you want to use `mysql` for the example, change settings in `.env` file. The default settings are:
 
@@ -33,26 +25,24 @@ DB_PASSWORD=secret
 
 if you want to use another driver, modify `config/database.php` directly.
 
-After the database is configured, apply the migrations
+After the database is configured, apply the migrations:
+
 ```
 php artisan migrate
 ```
 
-### Generate an APP_KEY
+### Configuration
 
-Use `php artisan key:generate` to generate your `APP_KEY`.
+1. Rename the `.env.example` file to `.env` and populate it with the required [Auth0](auth0.com) credentials. **Client ID**, **Client Secret**, and **Domain**.
 
-### Configure Auth0
+2. Use `php artisan key:generate` to generate your `APP_KEY`, it should be added automatically to the `.env` file.
 
-1. Rename the `.env.example` file to `.env` and populate it with your Auth0 credentials, including your client ID, client secret, and domain
+3. Go to your [Auth0 dashboard](https://manage.auth0.com) and add `http://<Apache IP>:8000/callback` to your **Allowed Callback URLs**.
 
-2. Go to your Auth0 dashboard and add `http://<ip-to-apache>/auth0/callback` to your authorized callbacks
-
-3. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
-
-
+4. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
 
 ## Heroku
+
 ### Configure your heroku account
 In order to do this you need to have an heroku account and the [Heroku toolbelt](https://toolbelt.heroku.com/) installed.
 
@@ -94,7 +84,7 @@ Configure heroku to use the same callback
 
 ## Things to note:
 * The Procfile tells heroku how to invoke an apache instance that is compatible with laravel
-* The `bootstrap/start.php` has a function that detects whether the enviroment is local or heroku
+* The `bootstrap/start.php` has a function that detects whether the environment is local or heroku
 
 ## Issue Reporting
 

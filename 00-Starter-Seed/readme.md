@@ -36,9 +36,9 @@ php artisan migrate
 
 2. Use `php artisan key:generate` to generate your `APP_KEY`, it should be added automatically to the `.env` file.
 
-3. Go to your [Auth0 dashboard](https://manage.auth0.com) and add `http://<Apache IP>:8000/callback` to your **Allowed Callback URLs**.
+3. Go to your [Auth0 dashboard](https://manage.auth0.com) and add `http://<Apache IP>:3000/callback` to your **Allowed Callback URLs**.
 
-4. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
+4. Run `php artisan serve --port=3000` and browse to [http://localhost:3000](http://localhost:3000)
 
 ## Heroku
 
@@ -98,7 +98,7 @@ If you have found a bug or if you have a feature request, please report them at 
 
 ## Author
 
-[Auth0](auth0.com)
+[Auth0](https://auth0.com)
 
 ## License
 

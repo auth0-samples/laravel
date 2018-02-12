@@ -31,17 +31,6 @@ class AppServiceProvider extends ServiceProvider
             Auth0UserRepositoryContract::class, 
             Auth0UserRepository::class 
         ); 
-        
-        // $this->app->bind(
-        //     '\Auth0\SDK\Helpers\Cache\CacheHandler',
-        //     function() {
-        //         static $cacheWrapper = null; 
-        //         if ($cacheWrapper === null) {
-        //             $cache = Cache::store();
-        //             $cacheWrapper = new LaravelCacheWrapper($cache);
-        //         }
-        //         return $cacheWrapper;
-        //     });
 
     }
 }

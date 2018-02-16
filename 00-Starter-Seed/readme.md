@@ -7,8 +7,10 @@ This is a tutorial on how to run an example [laravel](https://laravel.com/) appl
 ### Installing Dependencies
 
 ```
-php composer.phar install
+composer install
 ```
+__Note__: If you don't have the file `composer.lock` in your project, you should run `php composer.phar install` instead.
+
 > For more information about Composer usage, check [their official documentation](https://getcomposer.org/doc/01-basic-usage.md).
 
 ### (Optional) Configure the database

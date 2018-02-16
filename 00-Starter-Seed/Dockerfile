@@ -18,6 +18,6 @@ RUN php artisan optimize
 # Migrate the database
 RUN php artisan migrate
 
-CMD php artisan serve --host=0.0.0.0
+CMD php artisan serve --host=0.0.0.0 --port=3000
 
-EXPOSE 8000
+EXPOSE 3000

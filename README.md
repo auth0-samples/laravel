@@ -1,100 +1,26 @@
-# Laravel example tutorial
+# Auth0 Laravel Samples
 
-This is a tutorial on how to run an example laravel application that uses auth0 for authentication, we have it in two flavor, as a local application using apache, or in the cloud using heroku
+These samples demonstrate how to add authentication to Laravel application with Auth0. Each folder contains a distinct application so that various Auth0 features can be viewed in isolation. You can read about these examples in our [Laravel Quickstart](https://auth0.com/docs/quickstart/webapp/laravel).
 
-## Clone the example
+## Embedded Integration Samples
 
-```bash
-git clone https://github.com/auth0/laravel-auth0-sample.git
-```
+These samples use Auth0's [universal login page](https://auth0.com/docs/hosted-pages/login) which offers the fastest, most secure, and most feature-rich way to add authentication to your app.
 
-## 
+## What is Auth0?
 
-## Local apache
+Auth0 helps you to:
 
-### Update dependencies
+* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, among others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
+* Add authentication through more traditional **[username/password databases](https://docs.auth0.com/mysql-connection-tutorial)**.
+* Add support for **[linking different user accounts](https://docs.auth0.com/link-accounts)** with the same user.
+* Support for generating signed [Json Web Tokens](https://docs.auth0.com/jwt) to call your APIs and **flow the user identity** securely.
+* Analytics of how, when and where users are logging in.
+* Pull data from other sources and add it to the user profile, through [JavaScript rules](https://docs.auth0.com/rules).
 
-Download composer and execute
+## Create a free Auth0 account
 
-```
-php composer.phar install
-```
-
-### Configure the database
-
-If you want to use `mysql` for the example, change settings in `.env` file. The default settings are:
-
-```
-DB_HOST=localhost
-DB_DATABASE=homestead
-DB_USERNAME=homestead
-DB_PASSWORD=secret
-```
-
-if you want to use another driver, modify `config/database.php` directly.
-
-After the database is configured, apply the migrations
-```
-php artisan migrate
-```
-
-### Generate an APP_KEY
-
-Use `php artisan key:generate` to generate your `APP_KEY`.
-
-### Configure Auth0
-
-1. Rename the `.env.example` file to `.env` and populate it with your Auth0 credentials, including your client ID, client secret, and domain
-
-2. Go to your Auth0 dashboard and add `http://<ip-to-apache>/auth0/callback` to your authorized callbacks
-
-3. Run `php artisan serve` and browse to [http://localhost:8000](http://localhost:8000)
-
-
-
-## Heroku
-### Configure your heroku account
-In order to do this you need to have an heroku account and the [Heroku toolbelt](https://toolbelt.heroku.com/) installed.
-
-Login to heroku
-
-     heroku login
-
-Next, we need to create an application from the local git repository. In your path to the repo execute
-
-    heroku create --buildpack https://github.com/heroku/heroku-buildpack-php#beta
-
-Now you have a remote called heroku and you can upload to it by executing
-
-    git push heroku master
-
-### Configure the database
-
-Heroku uses postgresql by default, we can enable it by executing
-
-    heroku addons:add heroku-postgresql:dev
-
-Then apply the migrations by running the following command
-
-    heroku run php /app/artisan migrate
-
-### Configure Auth0
-
-Add auth0 as an addon
-
-    heroku addons:add auth0 --type=php --subdomain=<your-domain>
-
-Open your auth0 dashboard (you can use `heroku addons:open auth0`) and configure the callback of your application to be
-
-    http://<domain>/auth0/callback
-
-Configure heroku to use the same callback
-
-    heroku config:set AUTH0_CALLBACK_URL="http://<domain>/auth0/callback"
-
-## Things to note:
-* The Procfile tells heroku how to invoke an apache instance that is compatible with laravel
-* The `bootstrap/start.php` has a function that detects whether the enviroment is local or heroku
+1. Go to [Auth0](https://auth0.com/signup) and click Sign Up.
+2. Use Google, GitHub or Microsoft Account to login.
 
 ## Issue Reporting
 
@@ -102,7 +28,7 @@ If you have found a bug or if you have a feature request, please report them at 
 
 ## Author
 
-[Auth0](auth0.com)
+[Auth0](https://auth0.com)
 
 ## License
 

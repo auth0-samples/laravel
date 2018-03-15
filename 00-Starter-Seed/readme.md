@@ -1,15 +1,26 @@
 # Laravel example tutorial
 
-This is a tutorial on how to run an example [laravel](https://laravel.com/) application that uses [Auth0](auth0.com) for authentication, we have it in two flavor, as a local application using [Apache](https://www.apache.org/) or in the cloud using [heroku](https://www.heroku.com/).
+This is a tutorial on how to run an example [laravel](https://laravel.com/) application that uses [Auth0](auth0.com) for authentication, we have it in two flavors: a local application using [Apache](https://www.apache.org/) or in the cloud using [Heroku](https://www.heroku.com/).
 
 ## Local Application
 
 ### Installing Dependencies
 
+Dependencies are installed and updated with Composer:
+
+1. [Download Composer](https://getcomposer.org/download/)
+1. [Install Composer](https://getcomposer.org/doc/00-intro.md)
+1. [Run Composer](https://getcomposer.org/doc/01-basic-usage.md) depending on how it was installed:
+
 ```
-php composer.phar install
+php composer install # global install
 ```
-> For more information about Composer usage, check [their official documentation](https://getcomposer.org/doc/01-basic-usage.md).
+
+or ...
+    
+```
+php composer.phar install # local install
+```
 
 ### (Optional) Configure the database
 
@@ -42,10 +53,10 @@ php artisan migrate
 
 ## Heroku
 
-### Configure your heroku account
-In order to do this you need to have an heroku account and the [Heroku toolbelt](https://toolbelt.heroku.com/) installed.
+### Configure your Heroku account
+In order to do this you need to have an Heroku account and the [Heroku toolbelt](https://toolbelt.heroku.com/) installed.
 
-Login to heroku
+Login to Heroku
 
      heroku login
 
@@ -53,7 +64,7 @@ Next, we need to create an application from the local git repository. In your pa
 
     heroku create --buildpack https://github.com/heroku/heroku-buildpack-php#beta
 
-Now you have a remote called heroku and you can upload to it by executing
+Now you have a remote called Heroku and you can upload to it by executing
 
     git push heroku master
 
@@ -77,13 +88,13 @@ Open your auth0 dashboard (you can use `heroku addons:open auth0`) and configure
 
     http://<domain>/auth0/callback
 
-Configure heroku to use the same callback
+Configure Heroku to use the same callback
 
     heroku config:set AUTH0_CALLBACK_URL="http://<domain>/auth0/callback"
 
 ## Things to note:
-* The Procfile tells heroku how to invoke an apache instance that is compatible with laravel
-* The `bootstrap/start.php` has a function that detects whether the environment is local or heroku
+* The Procfile tells Heroku how to invoke an apache instance that is compatible with laravel
+* The `bootstrap/start.php` has a function that detects whether the environment is local or Heroku
 
 ## Running the example with Docker
 

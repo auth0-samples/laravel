@@ -6,21 +6,17 @@ This is a tutorial on how to run an example [laravel](https://laravel.com/) appl
 
 ### Installing Dependencies
 
-Dependencies are installed and updated with Composer:
+Dependencies are installed and updated with Composer. If you have Composer installed globally, run:
+
+```
+composer install
+```
+
+Otherwise:
 
 1. [Download Composer](https://getcomposer.org/download/)
 1. [Install Composer](https://getcomposer.org/doc/00-intro.md)
-1. [Run Composer](https://getcomposer.org/doc/01-basic-usage.md) depending on how it was installed:
-
-```
-php composer install # global install
-```
-
-or ...
-    
-```
-php composer.phar install # local install
-```
+1. [Run Composer](https://getcomposer.org/doc/01-basic-usage.md)
 
 ### (Optional) Configure the database
 

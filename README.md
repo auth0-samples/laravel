@@ -2,10 +2,6 @@
 
 These samples demonstrate how to add authentication to Laravel application with Auth0. Each folder contains a distinct application so that various Auth0 features can be viewed in isolation. You can read about these examples in our [Laravel Quickstart](https://auth0.com/docs/quickstart/webapp/laravel).
 
-## Embedded Integration Samples
-
-These samples use Auth0's [universal login page](https://auth0.com/docs/hosted-pages/login) which offers the fastest, most secure, and most feature-rich way to add authentication to your app.
-
 ## What is Auth0?
 
 Auth0 helps you to:

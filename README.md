@@ -1,6 +1,6 @@
 # Auth0 Laravel Samples
 
-These samples demonstrate how to add authentication to Laravel application with Auth0. Each folder contains a distinct application so that various Auth0 features can be viewed in isolation. You can read about these examples in our [Laravel Quickstart](https://auth0.com/docs/quickstart/webapp/laravel).
+These samples demonstrate how to add Auth0 authentication to a Laravel application. Each folder above contains a distinct application so that various Auth0 features can be viewed in isolation. 
 
 ## What is Auth0?
 

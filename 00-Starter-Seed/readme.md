@@ -1,6 +1,8 @@
-# Laravel example tutorial
+# Laravel Login Tutorial
 
-This is a tutorial on how to run an example [laravel](https://laravel.com/) application that uses [Auth0](auth0.com) for authentication, we have it in two flavors: a local application using [Apache](https://www.apache.org/) or in the cloud using [Heroku](https://www.heroku.com/).
+This is a tutorial on how to run an example [Laravel](https://laravel.com/) application that uses [Auth0](auth0.com) for authentication. We have it in two flavors: a local application using [Apache](https://www.apache.org/) or in the cloud using [Heroku](https://www.heroku.com/).
+
+A step-by-step [Quickstart document](hhttps://auth0.com/docs/quickstart/webapp/laravel) is provided with more detail on how this example was built. If you prefer to skip it and just run the sample, make sure to setup the project first using the steps below.
 
 ## Local Application
 

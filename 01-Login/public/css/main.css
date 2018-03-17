@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.a0-u--sep {
+  font-size: 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: top;
+  margin: 0 0.5em; }
+  .a0-u--sep:before {
+    content: "•"; }
+.a0-u--red {
+  color: #EB5424; }
+
+body {
+  background: #F5F7F9; }
+
+h1 {
+  font-size: 3em;
+  margin: 0 0 0.6em; }
+
+.content {
+  text-align: center;
+  padding: 5%;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  max-width: 42em;
+  margin: 2em auto; }
+
+/*# sourceMappingURL=main.css.map */

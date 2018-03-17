@@ -1,0 +1,21 @@
+@import "inc/variables";
+@import "partials/utilities";
+
+body {
+  background: $bg-color-light;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0 0 0.6em;
+}
+
+.content {
+  text-align: center;
+  padding: 5%;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  max-width: 42em;
+  margin: 2em auto;
+}

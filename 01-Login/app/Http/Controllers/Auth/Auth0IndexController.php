@@ -8,6 +8,7 @@ class Auth0IndexController extends Controller
 {
     /**
      * Redirect to the Auth0 hosted login page
+     *
      * @return mixed
      */
     public function login()
@@ -17,6 +18,7 @@ class Auth0IndexController extends Controller
 
     /**
      * Log out of our app
+     *
      * @return mixed
      */
     public function logout()
@@ -27,6 +29,7 @@ class Auth0IndexController extends Controller
 
     /**
      * Display the user's Auth0 data
+     *
      * @return mixed
      */
     public function profile()

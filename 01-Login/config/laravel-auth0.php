@@ -27,16 +27,16 @@ return array(
     |   As set in the auth0 administration page
     |
     */
-     'client_secret' => env( 'AUTH0_CLIENT_SECRET' ),
+    'client_secret' => env( 'AUTH0_CLIENT_SECRET' ),
 
-   /*
-    |--------------------------------------------------------------------------
-    |   The redirect URI
-    |--------------------------------------------------------------------------
-    |   Should be the same that the one configure in the route to handle the
-    |   'Auth0\Login\Auth0Controller@callback'
-    |
-    */
+    /*
+     |--------------------------------------------------------------------------
+     |   The redirect URI
+     |--------------------------------------------------------------------------
+     |   Should be the same that the one configure in the route to handle the
+     |   'Auth0\Login\Auth0Controller@callback'
+     |
+     */
     'redirect_uri'  => env( 'APP_URL' ) . '/auth0/callback',
 
     /*
@@ -50,7 +50,7 @@ return array(
     */
     'persist_user' => true,
     'persist_access_token' => false,
-    'persist_id_token' => true,
+    'persist_id_token' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return array(
     |--------------------------------------------------------------------------
     |
     */
-    'api_identifier'  => '',
+    // 'api_identifier'  => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -86,4 +86,13 @@ return array(
     |
     */
     'supported_algs'        => [ 'HS256', 'RS256' ],
+
+    /*
+    |--------------------------------------------------------------------------
+    |   Guzzle Options
+    |--------------------------------------------------------------------------
+    |   guzzle_options    (array) optional. Used to specify additional connection options e.g. proxy settings
+    |
+    */
+    // 'guzzle_options' => []
 );

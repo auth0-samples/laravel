@@ -1,4 +1,8 @@
-# Laravel Login Tutorial
+# Laravel Login Tutorial - DEPRECATED
+
+**Please note:** This tutorial is deprecated (pull requests still accepted). Please see the [01-Login](/auth0-samples/auth0-laravel-php-web-app/tree/master/01-Login) tutorial in this repository. 
+
+## Introduction
 
 This is a tutorial on how to run an example [Laravel](https://laravel.com/) application that uses [Auth0](auth0.com) for authentication. We have it in two flavors: a local application using [Apache](https://www.apache.org/) or in the cloud using [Heroku](https://www.heroku.com/).
 

@@ -1,6 +1,6 @@
 # Laravel Login Tutorial - DEPRECATED
 
-**Please note:** This tutorial is deprecated (pull requests still accepted). Please see the [01-Login](/auth0-samples/auth0-laravel-php-web-app/tree/master/01-Login) tutorial in this repository. 
+**Please note:** This tutorial is deprecated (pull requests still accepted). Please see the [01-Login](https://github.com/auth0-samples/auth0-laravel-php-web-app/tree/master/01-Login) tutorial in this repository. 
 
 ## Introduction
 

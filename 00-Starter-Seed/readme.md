@@ -45,7 +45,7 @@ php artisan migrate
 
 ### Configuration
 
-1. Rename the `.env.example` file to `.env` and populate it with the required [Auth0](auth0.com) credentials. **Client ID**, **Client Secret**, and **Domain**.
+1. Rename the `.env.example` file to `.env` and populate it with the required [Auth0](auth0.com) credentials. **Application ID**, **Application Secret**, and **Domain**.
 
 2. Use `php artisan key:generate` to generate your `APP_KEY`, it should be added automatically to the `.env` file.
 

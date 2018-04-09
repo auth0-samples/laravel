@@ -8,7 +8,7 @@ A step-by-step [Quickstart document](hhttps://auth0.com/docs/quickstart/webapp/l
 
 ## Create an Auth0 Account and Application
 
-This tutorial requires an Auth0 account and a Application configured for this application type. 
+This tutorial requires an Auth0 account and a Application configured for this type. 
 
 1. Sign up for your free Auth0 account [here](https://auth0.com/signup)
 1. Go to **Applications > Create Application** in the Dashboard
@@ -50,10 +50,10 @@ Please see the `app/Providers/AppServiceProvider.php` file for information on ho
 
 1. Rename the `.env.example` file to `.env` and add the required credentials from the settings page for the Application created previously.
     * **Domain** as `AUTH0_DOMAIN`
-    * **Application ID** as `AUTH0_CLIENT_ID`
-    * **Application Secret** as `AUTH0_CLIENT_SECRET`
+    * **Client ID** as `AUTH0_CLIENT_ID`
+    * **Client Secret** as `AUTH0_CLIENT_SECRET`
 1. Enter `php artisan key:generate` in the console to create an `APP_KEY` automatically in the `.env` file.
-1. Go to your [Auth0 dashboard](https://manage.auth0.com/#/applications) and add the following:
+1. Go to your [Auth0 dashboard](https://manage.auth0.com) and add the following:
     * `http://localhost:3000/auth0/callback` to the **Allowed Callback URLs** field
     * `http://localhost:3000` to the **Allowed Web Origins** field
     * `http://localhost:3000` to the **Allowed Logout URLs** field
@@ -117,7 +117,7 @@ Now you have a remote called Heroku and you can upload to it by executing
 git push heroku master
 ```
 
-Finally, go to your [Auth0 dashboard](https://manage.auth0.com/#/applications) and add the following to the Application used above:
+Finally, go to your [Auth0 dashboard](https://manage.auth0.com/#/clients) and add the following to the Application used above:
     * `https://HEROKU_APP_NAME.herokuapp.com/auth0/callback` to the **Allowed Callback URLs** field
     * `https://HEROKU_APP_NAME.herokuapp.com` to the **Allowed Web Origins** field
     * `https://HEROKU_APP_NAME.herokuapp.com` to the **Allowed Logout URLs** field

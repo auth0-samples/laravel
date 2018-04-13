@@ -6,13 +6,13 @@ This tutorial explains how to run an example [Laravel](https://laravel.com/) app
 
 A step-by-step [Quickstart document](hhttps://auth0.com/docs/quickstart/webapp/laravel) is provided with more detail on how this example was built. If you prefer to skip it and just run the sample, make sure to setup the project first using the steps below.
 
-## Create an Auth0 Account and Client
+## Create an Auth0 Account and Application
 
-This tutorial requires an Auth0 account and a Client configured for this application type. 
+This tutorial requires an Auth0 account and a Application configured for this type. 
 
 1. Sign up for your free Auth0 account [here](https://auth0.com/signup)
-1. Go to **Clients > New Client** in the Dashboard
-1. Give your Client a name, select **Regular Web Application**, and click **Create**
+1. Go to **Applications > Create Application** in the Dashboard
+1. Give your Application a name, select **Regular Web Application**, and click **Create**
 1. Select **PHP (Laravel)** to see the steps for how this seed project was created or scroll up and click the **Settings** tab to get started using the pre-built project below.
 
 ## Local Application
@@ -48,7 +48,7 @@ Please see the `app/Providers/AppServiceProvider.php` file for information on ho
 
 ### Configuration
 
-1. Rename the `.env.example` file to `.env` and add the required credentials from the settings page for the Client created previously.
+1. Rename the `.env.example` file to `.env` and add the required credentials from the settings page for the Application created previously.
     * **Domain** as `AUTH0_DOMAIN`
     * **Client ID** as `AUTH0_CLIENT_ID`
     * **Client Secret** as `AUTH0_CLIENT_SECRET`
@@ -103,7 +103,7 @@ php artisan key:generate
 heroku config:set APP_KEY=GENERATED_APP_KEY # exclude surrounding square brackets
 ```
 
-Add environment config entries for required Auth0 attributes from your Client settings page: 
+Add environment config entries for required Auth0 attributes from your Application settings page: 
 
 ```bash
 heroku config:set AUTH0_DOMAIN=your-tenant.auth0.com
@@ -117,7 +117,7 @@ Now you have a remote called Heroku and you can upload to it by executing
 git push heroku master
 ```
 
-Finally, go to your [Auth0 dashboard](https://manage.auth0.com/#/clients) and add the following to the Client used above:
+Finally, go to your [Auth0 dashboard](https://manage.auth0.com/#/clients) and add the following to the Application used above:
     * `https://HEROKU_APP_NAME.herokuapp.com/auth0/callback` to the **Allowed Callback URLs** field
     * `https://HEROKU_APP_NAME.herokuapp.com` to the **Allowed Web Origins** field
     * `https://HEROKU_APP_NAME.herokuapp.com` to the **Allowed Logout URLs** field

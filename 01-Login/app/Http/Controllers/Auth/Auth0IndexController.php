@@ -24,7 +24,12 @@ class Auth0IndexController extends Controller
     public function logout()
     {
         \Auth::logout();
-        return  \Redirect::intended('/');
+        $logoutUrl = sprintf(
+            'https://%s/v2/logout?client_id=%s&returnTo=%s',
+            env('AUTH0_DOMAIN'),
+            env('AUTH0_CLIENT_ID'),
+            env('APP_URL'));
+        return  \Redirect::intended($logoutUrl);
     }
 
     /**

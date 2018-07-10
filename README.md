@@ -1,5 +1,7 @@
 # Auth0 Laravel Samples
 
+[![CircleCI](https://circleci.com/gh/auth0-samples/auth0-laravel-php-web-app.svg?style=svg)](https://circleci.com/gh/auth0-samples/auth0-laravel-php-web-app)
+
 These samples demonstrate how to add Auth0 authentication to a Laravel application. Each folder above contains a distinct application so that various Auth0 features can be viewed in isolation. 
 
 ## What is Auth0?

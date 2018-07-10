@@ -17,8 +17,8 @@
 @section('menu')
     @auth
         <a href="{{ route('profile') }}" class="btn btn-default">Profile</a>
-        <a href="{{ route('logout') }}" class="btn btn-success">Logout</a>
+        <a href="{{ route('logout') }}" id="qsLogoutBtn" class="btn btn-success">Logout</a>
     @else
-        <a href="{{ route('login') }}" class="btn btn-success">Login/Signup</a>
+        <a href="{{ route('login') }}" id="qsLoginBtn" class="btn btn-success">Login/Signup</a>
     @endauth
 @endsection

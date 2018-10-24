@@ -31,6 +31,15 @@ Otherwise:
 1. [Install Composer](https://getcomposer.org/doc/00-intro.md)
 1. [Run Composer](https://getcomposer.org/doc/01-basic-usage.md)
 
+### Installing Auth0 Plugin
+
+To install Auth0 plugin run `composer require auth0/login:"~5.0"`
+
+This will install:
+
+* The [Auth0 PHP SDK](https://github.com/auth0/auth0-PHP) in `vendor\auth0\auth0-php`
+* The [Auth0 Laravel plugin](https://github.com/auth0/laravel-auth0) in `vendor\auth0\login`
+
 ### Configure the Database (optional) 
 
 If you want to use `mysql` for the example, change settings in `.env` file. The default settings are:

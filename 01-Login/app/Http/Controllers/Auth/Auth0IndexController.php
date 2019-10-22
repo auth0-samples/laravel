@@ -13,11 +13,11 @@ class Auth0IndexController extends Controller
      */
     public function login()
     {
-        if (!auth()->check()) {
-            return \App::make('auth0')->login(null, null, ['scope' => 'openid name email email_verified'], 'code');
-        } else {
-            return redirect()->intended('/');   
+        if (auth()->check()) {
+            return redirect()->intended('/'); 
         }
+        
+        return \App::make('auth0')->login(null, null, ['scope' => 'openid name email email_verified'], 'code');
     }
 
     /**
@@ -45,9 +45,8 @@ class Auth0IndexController extends Controller
     {
         if ( ! \Auth::check() ) {
             return redirect()->route('login');
-        } else {
-            return view('profile')->with('user', print_r( \Auth::user()->getUserInfo(), true ));
         }
-
+        
+        return view('profile')->with('user', print_r( \Auth::user()->getUserInfo(), true ));
     }
 }

@@ -1,4 +1,4 @@
-FROM php:7.1.15-cli-alpine
+FROM php:7.2-cli-alpine
 WORKDIR /home/app
 ADD composer.json /home/app
 RUN mkdir /home/app/database

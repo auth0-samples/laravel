@@ -15,12 +15,12 @@ defaults: &defaults
         command: |
           docker build -t $CIRCLE_JOB ./$SAMPLE_PATH
           docker run --rm -it -v $(pwd)/$AUTH0_CFG:/home/app/.env $CIRCLE_JOB php artisan key:generate
-          docker run --env-file ./$AUTH0_CFG -p 3000:3000 -it $CIRCLE_SHA1
+          docker run -d -p 3000:3000 --name $CIRCLE_SHA1 --env-file ./$AUTH0_CFG $CIRCLE_JOB
         background: true
     - run:
         name: Wait for app to be available
         command: |
-          sleep 30
+          sleep 50
           docker run --network host --rm appropriate/curl --retry 8 --retry-connrefused -v localhost:3000
     - run:
         name: Run tests

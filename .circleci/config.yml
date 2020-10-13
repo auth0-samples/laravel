@@ -7,9 +7,9 @@ defaults: &defaults
         name: Replace Auth0 test credentials
         command: |
           mv $AUTH0_CFG.example $AUTH0_CFG
-          sed -i 's/{CLIENT_ID}/'$AUTH0_TEST_CLIENT_ID'/g' $AUTH0_CFG
-          sed -i 's/{DOMAIN}/'$AUTH0_TEST_DOMAIN'/g' $AUTH0_CFG
-          sed -i 's/{CLIENT_SECRET}/'$AUTH0_TEST_CLIENT_SECRET'/g' $AUTH0_CFG
+          sed -i 's/YOUR_CLIENT_ID_HERE/'$AUTH0_TEST_CLIENT_ID'/g' $AUTH0_CFG
+          sed -i 's/your-tenant.auth0.com/'$AUTH0_TEST_DOMAIN'/g' $AUTH0_CFG
+          sed -i 's/YOUR_CLIENT_SECRET_HERE/'$AUTH0_TEST_CLIENT_SECRET'/g' $AUTH0_CFG
     - run:
         name: Build pull request
         command: |

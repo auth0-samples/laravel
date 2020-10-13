@@ -14,7 +14,7 @@ defaults: &defaults
         name: Build pull request
         command: |
           docker build -t $CIRCLE_JOB ./$SAMPLE_PATH
-          docker run --rm -it -v $(pwd)/$AUTH0_CFG $CIRCLE_JOB php artisan key:generate
+          docker run -it -v $(pwd)/$AUTH0_CFG:/home/app/.env $CIRCLE_JOB php artisan key:generate
           docker run -d -p 3000:3000 --name $CIRCLE_SHA1 --env-file $(pwd)/$AUTH0_CFG $CIRCLE_JOB
         background: true
     - run:

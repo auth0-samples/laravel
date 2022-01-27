@@ -67,6 +67,7 @@ commands:
 
 jobs:
   phpinsights:
+    working_directory: app
     parameters:
       php:
         type: string
@@ -76,6 +77,7 @@ jobs:
       - setup
       - run-phpinsights
   phpstan:
+    working_directory: app
     parameters:
       php:
         type: string
@@ -85,6 +87,7 @@ jobs:
       - setup
       - run-phpstan
   semgrep:
+    working_directory: app
     docker:
       - image: returntocorp/semgrep:latest
     steps:
@@ -93,6 +96,7 @@ jobs:
           name: Run static code analysis (Semgrep)
           command: semgrep --config auto
   pest:
+    working_directory: app
     parameters:
       php:
         type: string
@@ -103,6 +107,7 @@ jobs:
       - setup-pcov
       - run-pest
   snyk:
+    working_directory: app
     parameters:
       php:
         type: string

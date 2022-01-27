@@ -11,6 +11,7 @@ commands:
       - checkout
 
       - run:
+          working_directory: app
           name: Install dependencies
           command: |
             EXPECTED_CHECKSUM="$(php -r 'copy("https://composer.github.io/installer.sig", "php://stdout");')"
@@ -41,24 +42,28 @@ commands:
   run-phpinsights:
     steps:
       - run:
+          working_directory: app
           name: Run code quality analysis (PHP Insights)
           command: php -d memory-limit=-1 ./vendor/bin/phpinsights -v --no-interaction --min-quality=100 --min-complexity=50 --min-architecture=100 --min-style=100
 
   run-phpstan:
     steps:
       - run:
+          working_directory: app
           name: Run static code analysis (PHPStan)
           command: php -d memory_limit=-1 ./vendor/bin/phpstan analyse --ansi
 
   run-pest:
     steps:
       - run:
+          working_directory: app
           name: Run unit tests (Pest)
           command: php -d memory_limit=-1 ./vendor/bin/pest --stop-on-failure --min=100
 
   run-snyk:
     steps:
       - run:
+          working_directory: app
           name: Run vulnerabilities tests (Snyk)
           command: |
             apk add npm
@@ -67,7 +72,6 @@ commands:
 
 jobs:
   phpinsights:
-    working_directory: app
     parameters:
       php:
         type: string
@@ -77,7 +81,6 @@ jobs:
       - setup
       - run-phpinsights
   phpstan:
-    working_directory: app
     parameters:
       php:
         type: string
@@ -87,7 +90,6 @@ jobs:
       - setup
       - run-phpstan
   semgrep:
-    working_directory: app
     docker:
       - image: returntocorp/semgrep:latest
     steps:
@@ -96,7 +98,6 @@ jobs:
           name: Run static code analysis (Semgrep)
           command: semgrep --config auto
   pest:
-    working_directory: app
     parameters:
       php:
         type: string
@@ -107,7 +108,6 @@ jobs:
       - setup-pcov
       - run-pest
   snyk:
-    working_directory: app
     parameters:
       php:
         type: string

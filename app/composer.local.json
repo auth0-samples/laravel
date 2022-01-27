@@ -1,0 +1,11 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../laravel-auth0"
+        }
+    ],
+    "require": {
+        "auth0/login": "@dev"
+    }
+}

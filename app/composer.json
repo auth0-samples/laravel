@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "auth0/laravel-php-web-app",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Demonstration of the Auth0 Laravel SDK",
     "keywords": [
         "framework",
         "laravel"
@@ -17,12 +17,16 @@
         "laravel/tinker": "^2.7"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.0",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0",
+        "ergebnis/phpstan-rules": "^1.0",
+        "nunomaduro/larastan": "^1.0",
+        "nunomaduro/phpinsights": "^2.1",
+        "nyholm/psr7": "^1.4",
+        "orchestra/testbench": "7.x-dev",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.2",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "phpunit/phpunit": "^9.5",
+        "thecodingmachine/phpstan-strict-rules": "^1.0",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
     "autoload": {
@@ -50,6 +54,23 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "tests": [
+            "@tests:phpinsights",
+            "@tests:phpstan",
+            "@tests:pest"
+        ],
+        "tests:phpinsights": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php ./vendor/bin/phpinsights -v --no-interaction"
+        ],
+        "tests:phpstan": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php ./vendor/bin/phpstan analyse --ansi --memory-limit 512M"
+        ],
+        "tests:pest": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php ./vendor/bin/pest --stop-on-failure --coverage"
         ]
     },
     "extra": {

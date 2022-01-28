@@ -58,7 +58,7 @@ commands:
       - run:
           working_directory: app
           name: Run unit tests (Pest)
-          command: php -d memory_limit=-1 ./vendor/bin/pest --stop-on-failure --min=100
+          command: php -d memory_limit=-1 ./vendor/bin/pest --stop-on-failure
 
   run-snyk:
     steps:
@@ -68,7 +68,7 @@ commands:
           command: |
             apk add npm
             npm install -g snyk
-            snyk test --dev --org=auth0-sdks --project-name=auth0-PHP
+            snyk test --dev
 
 jobs:
   phpinsights:
@@ -126,10 +126,6 @@ workflows:
             parameters:
               php: ["8.0", "8.1"]
       - phpstan:
-          matrix:
-            parameters:
-              php: ["8.0", "8.1"]
-      - pest:
           matrix:
             parameters:
               php: ["8.0", "8.1"]

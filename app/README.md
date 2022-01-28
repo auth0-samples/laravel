@@ -28,9 +28,6 @@ AUTH0_DOMAIN='https://YOUR_AUTH0_DOMAIN.auth0.com'
 
 # Your Auth0 application's Client Secret
 AUTH0_CLIENT_SECRET='YOUR_AUTH0_CLIENT_SECRET'
-
-# A long secret value used to encrypt the session cookie
-AUTH0_COOKIE_SECRET='LONG_RANDOM_VALUE'
 ```
 
 **Note**: Make sure you replace `LONG_RANDOM_VALUE` with your secret (you can generate a suitable string using `openssl rand -hex 32` on the command line).

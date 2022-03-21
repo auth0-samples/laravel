@@ -15,12 +15,14 @@ class CustomUserRepository implements \Auth0\Laravel\Contract\Auth\User\Reposito
         return new \App\Models\User([
             'id' => $user['sub'] ?? $user['user_id'] ?? null,
             'name' => $user['name'],
-            'email' => $user['email']
+            'email' => $user['email'],
         ]);
     }
 
     /**
      * @inheritdoc
+     *
+     * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter
      */
     public function fromAccessToken(
         array $user

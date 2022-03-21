@@ -77,7 +77,10 @@ return [
 
         'auth0' => [
             'driver' => 'auth0',
-            'repository' => \Auth0\Laravel\Auth\User\Repository::class
+            'repository' => \Auth0\Laravel\Auth\User\Repository::class,
+
+            // Uncomment this line for a demonstration of a custom UserRepository (app/Auth/CustomUserRepository.php)
+            // 'repository' => App\Auth\CustomUserRepository::class
         ],
     ],
 

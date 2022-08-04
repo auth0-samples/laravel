@@ -60,16 +60,6 @@ commands:
           name: Run unit tests (Pest)
           command: php -d memory_limit=-1 ./vendor/bin/pest --stop-on-failure
 
-  run-snyk:
-    steps:
-      - run:
-          working_directory: app
-          name: Run vulnerabilities tests (Snyk)
-          command: |
-            apk add npm
-            npm install -g snyk
-            snyk test --dev
-
 jobs:
   phpinsights:
     parameters:
@@ -102,16 +92,6 @@ jobs:
       - setup-pcov
       - run-pest
 
-  snyk:
-    parameters:
-      php:
-        type: string
-    docker:
-      - image: php:<< parameters.php >>-cli-alpine
-    steps:
-      - setup
-      - run-snyk
-
   semgrep:
     docker:
       - image: returntocorp/semgrep-agent:v1
@@ -139,9 +119,3 @@ workflows:
       - semgrep:
           context:
             - semgrep-env
-      - snyk:
-          matrix:
-            parameters:
-              php: ["8.0", "8.1"]
-          context:
-            - snyk-env

@@ -17,16 +17,15 @@
         "laravel/tinker": "^2.7"
     },
     "require-dev": {
-        "ergebnis/phpstan-rules": "^1.0",
-        "nunomaduro/larastan": "^2.1",
-        "nunomaduro/phpinsights": "^2.1",
+        "laravel/pint": "^1.2",
+        "nunomaduro/larastan": "^1.0",
         "nyholm/psr7": "^1.4",
-        "orchestra/testbench": "7.x-dev",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.2",
-        "phpstan/phpstan-strict-rules": "^1.1",
-        "phpunit/phpunit": "^9.5",
-        "thecodingmachine/phpstan-strict-rules": "^1.0",
+        "orchestra/testbench": "^7.0",
+        "phpstan/phpstan": "^1.7",
+        "phpstan/phpstan-strict-rules": "1.4.3",
+        "psalm/plugin-laravel": "^2.0",
+        "rector/rector": "^0.13.6",
+        "vimeo/psalm": "^4.28",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
     "autoload": {
@@ -92,9 +91,9 @@
     },
     "config": {
         "allow-plugins": {
-          "dealerdirect/phpcodesniffer-composer-installer": true,
-          "pestphp/pest-plugin": true,
-          "wikimedia/composer-merge-plugin": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "pestphp/pest-plugin": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",

@@ -12,7 +12,9 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends \Illuminate\Database\Eloquent\Model implements StatefulUser, AuthenticatableUser
 {
-    use HasFactory, Notifiable, Authenticatable;
+    use HasFactory;
+    use Notifiable;
+    use Authenticatable;
 
     /**
      * The primary identifier for the user.

@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.7"
     },
     "require-dev": {
+        "ergebnis/composer-normalize": "^2.28",
         "laravel/pint": "^1.2",
         "nunomaduro/larastan": "^1.0",
         "nyholm/psr7": "^1.4",
@@ -92,7 +93,8 @@
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "ergebnis/composer-normalize": true
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",

@@ -54,23 +54,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "tests": [
-            "@tests:phpinsights",
-            "@tests:phpstan",
-            "@tests:pest"
-        ],
-        "tests:phpinsights": [
-            "Composer\\Config::disableProcessTimeout",
-            "@php ./vendor/bin/phpinsights -v --no-interaction"
-        ],
-        "tests:phpstan": [
-            "Composer\\Config::disableProcessTimeout",
-            "@php ./vendor/bin/phpstan analyse --ansi --memory-limit 512M"
-        ],
-        "tests:pest": [
-            "Composer\\Config::disableProcessTimeout",
-            "@php ./vendor/bin/pest --stop-on-failure --coverage"
         ]
     },
     "extra": {

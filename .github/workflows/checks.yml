@@ -269,4 +269,4 @@ jobs:
         run: composer install --prefer-dist
 
       - name: Execute Rector
-        run: vendor/bin/rector process src --dry-run
+        run: vendor/bin/rector --dry-run

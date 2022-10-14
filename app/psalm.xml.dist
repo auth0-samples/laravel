@@ -7,17 +7,16 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <directory name="app"/>
+        <directory name="app" />
+
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
     </projectFiles>
 
     <issueHandlers>
-        <MixedArgument errorLevel="suppress"/>
-        <MixedArgumentTypeCoercion errorLevel="suppress"/>
-        <MixedArrayAccess errorLevel="suppress"/>
-        <MixedAssignment errorLevel="suppress"/>
-        <MixedInferredReturnType errorLevel="suppress"/>
-        <MixedPropertyTypeCoercion errorLevel="suppress"/>
-        <MixedReturnStatement errorLevel="suppress"/>
+        <NonInvariantDocblockPropertyType errorLevel="suppress"/>
+        <UnusedClosureParam errorLevel="suppress"/>
     </issueHandlers>
 
     <plugins>

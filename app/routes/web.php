@@ -8,7 +8,7 @@ Route::get('/private', function () {
 })->middleware('auth');
 
 Route::get('/scope', function () {
-    return response('You have the `read:messages` permissions, and can therefore access this resource.');
+    return response('You have `read:messages` permission, and can therefore access this resource.');
 })->middleware('auth')->can('read:messages');
 
 Route::get('/', function () {
@@ -44,25 +44,4 @@ Route::get('/colors', function () {
   $name = auth()->user()->name;
 
   return response("Hello {$name}! Your favorite color is {$color}.");
-})->middleware('auth');
-
-Route::get('/me', function () {
-  $user = auth()->id();
-  $profile = cache()->get($user);
-
-  if (null === $profile) {
-    $endpoint = Auth0::management()->users();
-    $profile = $endpoint->get($user);
-    $profile = Auth0::json($profile);
-
-    cache()->put($user, $profile, 120);
-  }
-
-  $name = $profile['name'] ?? 'Unknown';
-  $email = $profile['email'] ?? 'Unknown';
-
-  return response()->json([
-    'name' => $name,
-    'email' => $email,
-  ]);
 })->middleware('auth');

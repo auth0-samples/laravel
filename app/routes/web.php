@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+use Auth0\Laravel\Http\Controller\Stateful\Callback;
+use Auth0\Laravel\Http\Controller\Stateful\Login;
+use Auth0\Laravel\Http\Controller\Stateful\Logout;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', \Auth0\Laravel\Http\Controller\Stateful\Login::class)->name('login');
-Route::get('/auth0/callback', \Auth0\Laravel\Http\Controller\Stateful\Callback::class)->name('auth0.callback');
-Route::get('/logout', \Auth0\Laravel\Http\Controller\Stateful\Logout::class)->name('logout');
+Route::get('/login', Login::class)->name('login');
+Route::get('/callback', Callback::class)->name('auth0.callback');
+Route::get('/logout', Logout::class)->name('logout');
 
 /*
 |--------------------------------------------------------------------------

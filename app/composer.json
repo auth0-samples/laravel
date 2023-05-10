@@ -14,13 +14,13 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "nyholm/psr7": "^1.8"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.28",
         "laravel/pint": "^1.2",
         "nunomaduro/larastan": "^1.0",
-        "nyholm/psr7": "^1.4",
         "orchestra/testbench": "^7.0",
         "phpstan/phpstan": "^1.7",
         "phpstan/phpstan-strict-rules": "1.4.3",
@@ -77,7 +77,8 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "wikimedia/composer-merge-plugin": true,
-            "ergebnis/composer-normalize": true
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": true
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",

@@ -1,6 +1,6 @@
-# Auth0 Laravel Web App Sample
+![Auth0 Laravek SDK](https://cdn.auth0.com/website/sdks/banners/laravel-auth0-banner.png)
 
-This sample demonstrates how to add authorization to a [PHP](http://php.net/) web app using [Auth0](https://auth0.com). The project source code can be found in the [app directory](./app). Follow along with [Laravel Quickstart](https://auth0.com/docs/quickstart/webapp/laravel) to understand this sample better.
+This is a sample project demonstrating how one can integrate [the Auth0 Laravel SDK](https://github.com/auth0/laravel-auth0) into a Laravel 9+ application. The source code can be found in the [sample directory](./sample).
 
 ## Vulnerability Reporting
 
@@ -21,4 +21,4 @@ Auth0 helps you to easily:
 
 ## License
 
-This project is licensed under the MIT license. See the [LICENSE](https://github.com/auth0-samples/auth0-php-web-app/blob/master/LICENSE) file for more info.
+This project is licensed under the MIT license. See the [LICENSE](./LICENSE) file for more info.

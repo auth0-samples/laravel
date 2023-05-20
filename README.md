@@ -25,13 +25,7 @@ You may also find the following documentation from the SDK's GitHub repository u
 Clone this repository:
 
 ```bash
-composer create-project auth0-samples/laravel auth0-laravel-quickstart
-```
-
-Set the working directory to the sample project root:
-
-```bash
-cd auth0-laravel-quickstart
+composer create-project auth0-samples/laravel auth0-laravel-quickstart && cd auth0-laravel-quickstart
 ```
 
 Authentication with Auth0 using the bundled Auth0 CLI:

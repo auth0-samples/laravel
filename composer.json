@@ -34,7 +34,7 @@
     "prefer-stable": true,
     "scripts": {
         "post-create-project-cmd": [
-            "rm -rf composer.json vendor editorconfig gitignore LICENSE README.md",
+            "rm -rf composer.json vendor editorconfig gitignore LICENSE sample/README.md",
             "composer install -d sample",
             "mv sample/* .",
             "rm -rf sample",

@@ -1,6 +1,6 @@
 ![Auth0 Laravel SDK](https://cdn.auth0.com/website/sdks/banners/laravel-auth0-banner.png)
 
-:books: [Documentation](#documentation) - :rocket: [Getting Started](#getting-started) - :rocket: [Demonstration Routes](#demonstration-route) - :rocket: [Default Laravel Application Changes](#summary-of-changes-applied-to-the-default-laravel-application)
+:books: [Documentation](#documentation) - :rocket: [Getting Started](#getting-started) - :round_pushpin: [Routes](#demonstration-route) - :wrench: [Default Changes](#summary-of-changes-applied-to-the-default-laravel-application)
 
 This is a sample project demonstrating how to integrate [the Auth0 Laravel SDK](https://github.com/auth0/laravel-auth0) into a Laravel 9 application. For Laravel 10 applications, the integration steps are identical.
 
@@ -110,7 +110,7 @@ The `routes/api.php` file contains routes that demonstrate token-based authoriza
 | GET    | [/api/scope](https://localhost:8000/api/scope)     | Demonstrates how to protect an API route with the `can` middleware.  |
 | GET    | [/api/me](https://localhost:8000/api/me)           | Demonstrates how to make Management API calls.                       |
 
-## Summary of Changes Applied to the Default Laravel Application
+## Summary of Changes to the Default Laravel Application
 
 This sample is based on [the default Laravel application](https://github.com/laravel/laravel) you can [create](https://laravel.com/docs/9.x/installation#your-first-laravel-project) using `laravel new` or `composer create-project`.
 

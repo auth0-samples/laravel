@@ -1,7 +1,7 @@
 {
     "name": "auth0-samples/laravel",
     "type": "project",
-    "description": "This demonstrates how to integrate Auth0 with a new or existing Laravel 9 or 10 application.",
+    "description": "Sample application demonstrating how to integrate Auth0 with Laravel 9 or Laravel 10 for session-based authentication and token-based authorization.",
     "keywords": [
         "framework",
         "laravel",

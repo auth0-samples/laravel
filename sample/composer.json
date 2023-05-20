@@ -4,7 +4,21 @@
     "description": "This demonstrates how to integrate Auth0 with a new or existing Laravel 9 or 10 application.",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "auth0",
+        "authentication",
+        "authorization",
+        "login",
+        "auth",
+        "jwt",
+        "json web token",
+        "jwk",
+        "json web key",
+        "oauth",
+        "openid",
+        "secure",
+        "protect",
+        "api"
     ],
     "license": "MIT",
     "require": {

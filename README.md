@@ -34,19 +34,7 @@ Set the working directory to the sample project root:
 cd auth0-laravel-quickstart/sample
 ```
 
-Install the dependencies:
-
-```bash
-composer install
-```
-
-Download the Auth0 CLI:
-
-```bash
-curl -sSfL https://raw.githubusercontent.com/auth0/auth0-cli/main/install.sh | sh -s -- -b .
-```
-
-Login to Auth0 with the CLI:
+Authentication with Auth0 using the bundled Auth0 CLI:
 
 ```bash
 ./auth0 login

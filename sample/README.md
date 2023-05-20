@@ -28,6 +28,12 @@ Clone this repository:
 git clone https://github.com/auth0-samples/laravel auth0-laravel-quickstart
 ```
 
+Set the working directory to the sample project root:
+
+```bash
+cd auth0-laravel-quickstart/sample
+```
+
 Install the dependencies:
 
 ```bash

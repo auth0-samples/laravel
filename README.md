@@ -22,7 +22,7 @@ You may also find the following documentation from the SDK's GitHub repository u
 
 ## Getting Started
 
-Clone this repository:
+Use Composer's `create-project` command to clone this repository and install the dependencies:
 
 ```bash
 composer create-project auth0-samples/laravel auth0-laravel-quickstart && cd auth0-laravel-quickstart

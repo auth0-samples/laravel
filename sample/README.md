@@ -130,3 +130,7 @@ Few changes are necessary to get started, as the SDK automatically sets up all t
 
 -   The `routes/web.php` file was updated to include the demonstration routes.
 -   The `routes/api.php` file was updated to include the demonstration routes.
+
+## Feedback
+
+We appreciate your feedback! Please create an issue in this repository or reach out to us on [Community](https://community.auth0.com/).

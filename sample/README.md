@@ -1,6 +1,6 @@
 ![Auth0 Laravel SDK](https://cdn.auth0.com/website/sdks/banners/laravel-auth0-banner.png)
 
-:books: [Documentation](#documentation) - :rocket: [Getting Started](#getting-started) - :round_pushpin: [Routes](#demonstration-route) - :wrench: [Default Changes](#summary-of-changes-applied-to-the-default-laravel-application)
+:books: [Documentation](#documentation) — :rocket: [Getting Started](#getting-started) — :round_pushpin: [Routes](#demonstration-route) — :wrench: [Default Changes](#summary-of-changes-applied-to-the-default-laravel-application)
 
 This is a sample project demonstrating how to integrate [the Auth0 Laravel SDK](https://github.com/auth0/laravel-auth0) into a Laravel 9 application. For Laravel 10 applications, the integration steps are identical.
 

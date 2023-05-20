@@ -25,7 +25,7 @@ You may also find the following documentation from the SDK's GitHub repository u
 Clone this repository:
 
 ```bash
-composer create-project auth0-samples/laravel auth0-laravel-quickstart
+git clone https://github.com/auth0-samples/laravel auth0-laravel-quickstart
 ```
 
 Set the working directory to the sample project root:
@@ -37,7 +37,7 @@ cd auth0-laravel-quickstart/sample
 Install the dependencies:
 
 ```bash
-composer install
+composer install --no-dev
 ```
 
 Download the Auth0 CLI:
@@ -116,7 +116,7 @@ The `routes/api.php` file contains routes that demonstrate token-based authoriza
 | GET    | [/api/scope](https://localhost:8000/api/scope)     | Demonstrates how to protect an API route with the `can` middleware.  |
 | GET    | [/api/me](https://localhost:8000/api/me)           | Demonstrates how to make Management API calls.                       |
 
-## Summary of Changes to the Default Laravel Application
+## Changes to the Default Laravel Application
 
 This sample is based on [the default Laravel application](https://github.com/laravel/laravel) you can [create](https://laravel.com/docs/9.x/installation#your-first-laravel-project) using `laravel new` or `composer create-project`.
 
@@ -140,3 +140,24 @@ Few changes are necessary to get started, as the SDK automatically sets up all t
 ## Feedback
 
 We appreciate your feedback! Please create an issue in this repository or reach out to us on [Community](https://community.auth0.com/).
+
+## Vulnerability Reporting
+
+Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
+
+## What is Auth0?
+
+Auth0 helps you to easily:
+
+- implement authentication with multiple identity providers, including social (e.g., Google, Facebook, Microsoft, LinkedIn, GitHub, Twitter, etc), or enterprise (e.g., Windows Azure AD, Google Apps, Active Directory, ADFS, SAML, etc.)
+- log in users with username/password databases, passwordless, or multi-factor authentication
+- link multiple user accounts together
+- generate signed JSON Web Tokens to authorize your API calls and flow the user identity securely
+- access demographics and analytics detailing how, when, and where users are logging in
+- enrich user profiles from other data sources using customizable JavaScript rules
+
+[Why Auth0?](https://auth0.com/why-auth0)
+
+## License
+
+This project is licensed under the MIT license. See the [LICENSE](./LICENSE) file for more info.

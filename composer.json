@@ -37,6 +37,7 @@
             "rm -rf composer.json vendor .github editorconfig gitignore LICENSE sample/README.md",
             "composer install -d sample --no-dev",
             "mv sample/* .",
+            "cp sample/.env.example .env.example",
             "rm -rf sample",
             "curl -sSfL https://raw.githubusercontent.com/auth0/auth0-cli/main/install.sh | sh -s -- -b ."
         ]

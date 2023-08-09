@@ -1,0 +1,9 @@
+.github/                    export-ignore
+eloquent/                   export-ignore
+lumen/                      export-ignore
+spa/                        export-ignore
+spatie-laravel-permissions/ export-ignore
+vercel/                     export-ignore
+.editorconfig               export-ignore
+.gitattributes              export-ignore
+.gitignore                  export-ignore

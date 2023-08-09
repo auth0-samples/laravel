@@ -8,17 +8,17 @@ This is a sample project demonstrating how to integrate [the Auth0 Laravel SDK](
 
 Guidance on integrating Auth0 into your Laravel application can be found here:
 
--   [Auth0 Laravel SDK Readme](https://github.com/auth0/laravel-auth0/blob/master/README.md)
--   [Auth0 Laravel SDK Session Authentication Quickstart](https://auth0.com/docs/quickstart/webapp/laravel)
--   [Auth0 Laravel SDK Token Authorization Quickstart](https://auth0.com/docs/quickstart/backend/laravel)
+- [Auth0 Laravel SDK Readme](https://github.com/auth0/laravel-auth0/blob/master/README.md)
+- [Auth0 Laravel SDK Session Authentication Quickstart](https://auth0.com/docs/quickstart/webapp/laravel)
+- [Auth0 Laravel SDK Token Authorization Quickstart](https://auth0.com/docs/quickstart/backend/laravel)
 
 You may also find the following documentation from the SDK's GitHub repository useful:
 
--   [docs/Configuration](https://github.com/auth0/laravel-auth0/blob/master/docs/Configuration.md)
--   [docs/Events](https://github.com/auth0/laravel-auth0/blob/master/docs/Events.md)
--   [docs/Installation](https://github.com/auth0/laravel-auth0/blob/master/docs/Installation.md)
--   [docs/Management](https://github.com/auth0/laravel-auth0/blob/master/docs/Management.md)
--   [docs/Users](https://github.com/auth0/laravel-auth0/blob/master/docs/Users.md)
+- [docs/Configuration](https://github.com/auth0/laravel-auth0/blob/master/docs/Configuration.md)
+- [docs/Events](https://github.com/auth0/laravel-auth0/blob/master/docs/Events.md)
+- [docs/Installation](https://github.com/auth0/laravel-auth0/blob/master/docs/Installation.md)
+- [docs/Management](https://github.com/auth0/laravel-auth0/blob/master/docs/Management.md)
+- [docs/Users](https://github.com/auth0/laravel-auth0/blob/master/docs/Users.md)
 
 ## Getting Started
 
@@ -110,20 +110,20 @@ This sample is based on [the default Laravel application](https://github.com/lar
 
 Few changes are necessary to get started, as the SDK automatically sets up all the necessary guards, middleware and other services necessary to support authentication and authorization. The following is a list of changes that have been applied:
 
--   The `auth0/login` package has been added to the `composer.json` file, using:
+- The `auth0/login` package has been added to the `composer.json` file, using:
 
     ```bash
     composer require auth0/login:^7.8 --update-with-all-dependencies
     ```
 
--   The `config/auth0.php` file was generated, using:
+- The `config/auth0.php` file was generated, using:
 
     ```bash
     php artisan vendor:publish --tag auth0
     ```
 
--   The `routes/web.php` file was updated to include the demonstration routes.
--   The `routes/api.php` file was updated to include the demonstration routes.
+- The `routes/web.php` file was updated to include the demonstration routes.
+- The `routes/api.php` file was updated to include the demonstration routes.
 
 ## Feedback
 
@@ -137,12 +137,12 @@ Please do not report security vulnerabilities on the public GitHub issue tracker
 
 Auth0 helps you to easily:
 
--   implement authentication with multiple identity providers, including social (e.g., Google, Facebook, Microsoft, LinkedIn, GitHub, Twitter, etc), or enterprise (e.g., Windows Azure AD, Google Apps, Active Directory, ADFS, SAML, etc.)
--   log in users with username/password databases, passwordless, or multi-factor authentication
--   link multiple user accounts together
--   generate signed JSON Web Tokens to authorize your API calls and flow the user identity securely
--   access demographics and analytics detailing how, when, and where users are logging in
--   enrich user profiles from other data sources using customizable JavaScript rules
+- implement authentication with multiple identity providers, including social (e.g., Google, Facebook, Microsoft, LinkedIn, GitHub, Twitter, etc), or enterprise (e.g., Windows Azure AD, Google Apps, Active Directory, ADFS, SAML, etc.)
+- log in users with username/password databases, passwordless, or multi-factor authentication
+- link multiple user accounts together
+- generate signed JSON Web Tokens to authorize your API calls and flow the user identity securely
+- access demographics and analytics detailing how, when, and where users are logging in
+- enrich user profiles from other data sources using customizable JavaScript rules
 
 [Why Auth0?](https://auth0.com/why-auth0)
 
